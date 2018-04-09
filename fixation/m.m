@@ -29,4 +29,6 @@ for i = 1:(length(PQRST)-length(T)+1)
     k = k + 1;
 end
 [xmaxY,imaxT] = max(arrcoef);
-disp('Положение P: 'imaxP' ')
+% выводим положения каждого участка P, QRS и T
+formatSpec = "Положение P: %f сек,\nПоложение QRS: %f сек,\nПоложение T: %f сек\n";
+fprintf(formatSpec, imaxP/1e3, imaxQRS/1e3, imaxT/1e3)

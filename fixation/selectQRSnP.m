@@ -9,12 +9,4 @@ save('PQRST.mat', 'PQRST', '-mat')
 save('P.mat', 'P', '-mat')
 save('QRS.mat', 'QRS', '-mat')
 save('T.mat', 'T', '-mat')
-% k = 0;
-% arrcoef = zeros(1, length(PQRST)-length(P)+1);
-% for i = 1:(length(PQRST)-length(P)+1)
-%     PQRSTokno = PQRST(i:length(P)+k);
-%     coefcorr = corrcoef(PQRSTokno,P);
-%     arrcoef(i) = coefcorr(1,2);
-%     k = k + 1;
-% end
-% [xmax,imax]=max(arrcoef);
+plot((1:length(PQRST))*1e-3,PQRST)

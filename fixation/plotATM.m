@@ -31,7 +31,7 @@ for i = 1:size(val, 1)
     val(i, :) = (val(i, :) - base(i)) / gain(i);
 end
 
-x = (1:size(val, 2)) 
+x = (1:size(val, 2))*1e-3 
 plot(x', val');
 
 for i = 1:length(signal)
